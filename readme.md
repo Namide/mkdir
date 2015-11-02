@@ -11,8 +11,9 @@ Use C compilator
 Build
 ```
 #WIN
-gcc src\dirCreate.c -o bin\dirCreate
+windres src\mkdir.rc -O coff -o src\mkdir.res
+gcc src\mkdir.c -o bin\mkdir src\mkdir.res
 
 #MACOS
-gcc src\dirCreate.c -o bin\dirCreate
+gcc src/mkdir.c -o bin/mkdir
 ```
